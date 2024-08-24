@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+    <form id="resumeForm">
+      <!-- Basic Information -->
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required>
+      </div>
+
+      <!-- Sections -->
+      <div>
+        <label for="education">Education:</label>
+        <textarea id="education" rows="3" required></textarea>
+      </div>
+      <div>
+        <label for="experience">Experience:</label>
+        <textarea id="experience" rows="3" required></textarea>
+      </div>
+      <div>
+        <label for="skills">Skills:</label>
+        <textarea id="skills" rows="3" required></textarea>
+      </div>
+      <div>
+        <label for="projects">Projects:</label>
+        <textarea id="projects" rows="3"></textarea>
+      </div>
+      <div>
+        <label for="certifications">Certifications:</label>
+        <textarea id="certifications" rows="3"></textarea>
+      </div>
+
+      <!-- Styling Options -->
+      <div>
+        <label for="theme">Choose a Theme:</label>
+        <select id="theme">
+          <option value="default">Default</option>
+          <option value="professional">Professional</option>
+          <option value="creative">Creative</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="fontSize">Font Size:</label>
+        <input type="range" id="fontSize" min="12" max="24" value="16">
+      </div>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+      <button type="button" onclick="downloadResume()">Download PDF</button>
+    </form>
+
+    <div id="resumeOutput">
+      <!-- Generated resume will be displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
