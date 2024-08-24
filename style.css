@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#resumeOutput {
+  margin-top: 30px;
+  padding: 20px;
+  background: #e9ecef;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#resumeOutput h2 {
+  border-bottom: 2px solid #6c757d;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+#resumeOutput h3 {
+  margin-top: 30px;
+  border-bottom: 1px solid #6c757d;
+  padding-bottom: 5px;
+}
+
+#resumeOutput p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Themes */
+.default {
+  font-family: Arial, sans-serif;
+}
+
+.professional {
+  font-family: 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+.creative {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff5722;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+
+  input, textarea, select, button {
+      font-size: 14px;
+  }
+
+  #resumeOutput {
+      font-size: 14px;
+  }
+}
